@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>家安｜家庭生活稳定账户·商业路演</title>
+<style>
+:root{--navy:#06283f;--navy2:#0b3d59;--blue:#137094;--ink:#142737;--muted:#667b89;--paper:#f4f2ed;--gold:#efb65d;--ivory:#fffaf0;--green:#23836a;--red:#b84e45;--line:rgba(10,48,70,.14)}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#061f32;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+button{font:inherit}.deck{position:relative;width:100%;height:100%;isolation:isolate}.deck:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% 14%,rgba(27,112,145,.34),transparent 30%),linear-gradient(145deg,#041b2c,#082f48);z-index:-2}
+.chrome{position:absolute;z-index:50;left:0;right:0;top:0;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;color:#dce9f0;pointer-events:none}.brand{display:flex;align-items:center;gap:10px;font-weight:800;pointer-events:auto}.brand i{display:grid;place-items:center;width:31px;height:31px;border-radius:10px;background:var(--gold);color:var(--navy);font-style:normal}.page-meta{display:flex;align-items:center;gap:12px;font-size:12px;color:#a9c2d0}.page-meta button{pointer-events:auto;border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:7px 11px;background:rgba(255,255,255,.06);color:#dce9f0;cursor:pointer}.progress{position:absolute;z-index:60;left:0;right:0;top:0;height:3px;background:rgba(255,255,255,.1)}.progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),#ffe0a7);transition:width .45s ease}
+.stage{position:absolute;inset:0}.slide{position:absolute;inset:0;padding:76px 7vw 62px;display:grid;align-items:center;opacity:0;visibility:hidden;transform:translateY(6%);transition:opacity .38s ease,transform .55s cubic-bezier(.2,.75,.2,1),visibility .38s;overflow:hidden}.slide.active{opacity:1;visibility:visible;transform:none}.slide.past{transform:translateY(-6%)}.slide.light{background:var(--paper)}.slide.white{background:#fff}.slide.dark{background:radial-gradient(circle at 78% 12%,#115b7b 0,transparent 31%),linear-gradient(145deg,#041e32,#093d59);color:#fff}.slide.gold-bg{background:linear-gradient(145deg,#fffaf0,#f4e8ce)}
+.slide-inner{width:100%;max-width:1440px;margin:auto}.two-col{display:grid;grid-template-columns:minmax(0,.92fr) minmax(420px,1.08fr);gap:5.5vw;align-items:center}.two-col.equal{grid-template-columns:1fr 1fr}.two-col.poster-layout{grid-template-columns:minmax(0,1.1fr) minmax(320px,.6fr);gap:4.8vw}
+.kicker{color:#bc7b20;font-size:13px;font-weight:900;letter-spacing:.17em;text-transform:uppercase}.dark .kicker{color:#ffc96f}.title{margin:10px 0 20px;color:var(--navy);font:700 clamp(38px,4.2vw,68px)/1.14 "Songti SC",STSong,serif;letter-spacing:-.02em}.dark .title{color:#fff}.title em{color:#bf7b22;font-style:normal}.dark .title em{color:#ffc566}.subtitle{max-width:860px;color:#536b79;font-size:clamp(17px,1.55vw,24px);line-height:1.7}.dark .subtitle{color:#cbdce6}.giant{font:700 clamp(74px,12vw,184px)/.9 "Songti SC",STSong,serif;color:var(--navy);letter-spacing:-.07em}.giant span{color:var(--gold)}.quote{max-width:1080px;font:700 clamp(34px,4vw,62px)/1.45 "Songti SC",STSong,serif;color:var(--navy)}.quote .mark{background:linear-gradient(transparent 68%,rgba(239,182,93,.48) 0)}.dark .quote{color:#fff}.dark .quote .mark{background:linear-gradient(transparent 68%,rgba(255,194,93,.36) 0)}
+.poster{position:relative;justify-self:end;max-height:80vh;max-width:460px;padding:9px;border-radius:28px;background:rgba(255,255,255,.08);border:1px solid rgba(255,209,127,.4);box-shadow:0 30px 80px rgba(0,0,0,.35);transform:rotate(1deg)}.poster img{display:block;max-width:100%;max-height:calc(80vh - 18px);border-radius:21px}.poster:before{content:"产品主视觉";position:absolute;left:-20px;top:26px;padding:7px 12px;background:var(--gold);color:var(--navy);border-radius:999px;font-size:11px;font-weight:900}
+.principle{margin-top:28px;padding:18px 20px;border-left:4px solid var(--gold);background:rgba(255,255,255,.07);font:700 clamp(20px,2vw,30px)/1.5 "Songti SC",STSong,serif}.brand-lines{display:flex;gap:28px;margin-top:28px;color:#a9c4d3;font-size:13px}.brand-lines b{color:#fff}
+.problem-lines{display:grid;gap:17px;margin-top:26px}.problem-line{display:grid;grid-template-columns:50px 1fr;gap:16px;align-items:start}.problem-line i{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#e5eef1;color:var(--blue);font-style:normal;font-weight:900}.problem-line b{display:block;color:var(--navy);font-size:clamp(17px,1.45vw,23px);margin-bottom:3px}.problem-line p{margin:0;color:#647985;font-size:14px;line-height:1.55}.problem-visual{position:relative;min-height:470px;display:grid;place-items:center}.phone-stack{position:absolute;width:44%;aspect-ratio:.58;border-radius:32px;border:8px solid #0a273b;background:#fff;box-shadow:0 25px 55px rgba(4,36,55,.18)}.phone-stack.one{transform:translate(-25px,5px) rotate(-7deg);opacity:.52}.phone-stack.two{transform:translate(25px,-5px) rotate(5deg)}.phone-stack:before{content:"散落的保单";position:absolute;left:12%;right:12%;top:14%;height:14%;border-radius:12px;background:#dbe7eb;color:#587080;display:grid;place-items:center;font-weight:800}.phone-stack:after{content:"每次都从头问";position:absolute;left:12%;right:12%;top:35%;bottom:12%;border-radius:14px;background:repeating-linear-gradient(#eef3f5 0 16px,#fff 16px 31px);color:#9b6b28;padding:22px;text-align:center;font-weight:900}.pain-badge{position:absolute;right:0;bottom:15%;max-width:300px;padding:15px 18px;background:#fff4dc;border:1px solid #edce93;border-radius:15px;color:#7c5319;font-weight:900;line-height:1.5;box-shadow:0 12px 30px rgba(90,58,10,.12)}
+.persona{display:grid;grid-template-columns:.8fr 1.2fr;gap:5vw;align-items:center}.persona-core{position:relative;display:grid;place-items:center;width:min(34vw,430px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#fff 0 52%,#e8eff1 53% 66%,transparent 67%);margin:auto}.persona-core b{font:700 clamp(62px,7vw,108px)/1 "Songti SC",STSong,serif;color:var(--navy)}.persona-core span{position:absolute;bottom:24%;color:#a56d20;font-weight:900}.responsibilities{display:grid;gap:10px}.responsibility{display:grid;grid-template-columns:46px 1fr auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}.responsibility i{display:grid;place-items:center;width:41px;height:41px;border-radius:13px;background:#e9f1f3;color:var(--blue);font-style:normal;font-weight:900}.responsibility b{color:var(--navy);font-size:18px}.responsibility span{color:#9c6a26;font-size:13px}
+.category{display:grid;grid-template-columns:1.05fr .95fr;gap:6vw;align-items:center}.category-name{font:700 clamp(55px,7vw,118px)/1.02 "Songti SC",STSong,serif;color:var(--navy)}.category-name span{display:block;color:#bc7920}.three-questions{display:grid;gap:18px}.question-row{padding-bottom:18px;border-bottom:1px solid var(--line)}.question-row small{color:#b47721;font-weight:900}.question-row b{display:block;color:var(--navy);font:700 clamp(23px,2.2vw,34px)/1.35 "Songti SC",STSong,serif;margin-top:5px}.sequence{margin-top:28px;color:#7c531a;font-weight:900}.sequence span{display:inline-block;padding:7px 12px;margin:3px;border-radius:999px;background:#ffefc9;border:1px solid #edce90}
+.module-layout{display:grid;grid-template-columns:minmax(330px,.68fr) minmax(520px,1.32fr);gap:4vw;align-items:center}.module-copy .module-index{color:#b97820;font-size:13px;font-weight:900;letter-spacing:.13em}.module-copy h2{font:700 clamp(36px,3.4vw,57px)/1.18 "Songti SC",STSong,serif;color:var(--navy);margin:12px 0 18px}.module-copy .lead{color:#526b78;font-size:clamp(16px,1.4vw,21px);line-height:1.68}.module-copy ul{padding-left:20px;color:#526b78}.module-copy li{margin:8px 0}.module-outcome{margin-top:20px;padding:15px 17px;border-left:4px solid var(--gold);background:#fff3d8;color:#714b16;font-weight:900}.video-shell{position:relative;border-radius:22px;overflow:hidden;background:#05283f;box-shadow:0 25px 65px rgba(4,37,57,.24)}.video-shell video{display:block;width:100%;aspect-ratio:16/9;background:#031a2a}.video-label{display:flex;align-items:center;justify-content:space-between;padding:13px 17px;color:#fff;font-size:13px}.video-label span{color:#adc5d2}.play-hint{position:absolute;right:14px;top:14px;padding:6px 10px;border-radius:999px;background:rgba(4,33,51,.78);color:#ffcc74;font-size:11px;font-weight:900;backdrop-filter:blur(6px)}
+.month{font:700 clamp(86px,10vw,148px)/.85 "Songti SC",STSong,serif;color:var(--navy);margin:20px 0}.month em{font-style:normal;color:#c27e22}.month small{font:700 25px/1 sans-serif}.month-parts{display:flex;gap:10px;margin-bottom:22px}.month-parts span{padding:7px 10px;border-radius:9px;background:#e9f1f3;color:#54707f;font-size:12px}.ai-answer{border-left:4px solid var(--gold);padding-left:18px;margin:22px 0}.ai-answer b{font:700 27px/1.4 "Songti SC",STSong,serif;color:var(--navy)}.redline{border-bottom:3px solid rgba(184,78,69,.55);font-weight:900}.sales-script{padding:12px 15px;border-left:4px solid #7d909d;background:#edf2f3;color:#324a58;font-size:13px}
+.module-copy h2 em{color:#bd7a22;font-style:normal}.module-copy h2 .title-line{display:block;white-space:nowrap}.today-list{margin:22px 0 18px;border-top:1px solid var(--line)}.today-item{display:grid;grid-template-columns:38px minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}.slide.active .today-item{animation:enterUp .52s cubic-bezier(.2,.75,.2,1) backwards}.slide.active .today-item:nth-child(1){animation-delay:.18s}.slide.active .today-item:nth-child(2){animation-delay:.25s}.slide.active .today-item:nth-child(3){animation-delay:.32s}.today-item i{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:#e4eef1;color:var(--blue);font-style:normal;font-weight:900}.today-item b{display:block;color:var(--navy);font-size:16px}.today-item span{display:block;margin-top:2px;color:#6b7f8b;font-size:12px}.today-item strong{color:#a66f23;font-size:11px;white-space:nowrap}
+.moat-stack{display:grid;gap:10px;margin-top:28px}.moat-layer{display:grid;grid-template-columns:180px 1fr auto;gap:22px;align-items:center;padding:16px 21px;border-radius:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.13)}.moat-layer:nth-child(2){margin:0 2.5%}.moat-layer:nth-child(3){margin:0 5%}.moat-layer:nth-child(4){margin:0 7.5%;background:rgba(239,182,93,.15);border-color:rgba(239,182,93,.34)}.moat-layer b{color:#fff;font-size:18px}.moat-layer span{color:#c5d7e1}.moat-layer em{color:#ffcc75;font-style:normal;font-size:12px;font-weight:900}.moat-close{margin-top:28px;text-align:center;color:#c8dbe5;font:700 25px/1.5 "Songti SC",STSong,serif}
+.flywheel{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:42px}.fly-step{position:relative;min-height:215px;padding:22px 17px;border-radius:18px;background:#fff;border:1px solid var(--line)}.fly-step:not(:last-child):after{content:"→";position:absolute;right:-16px;top:44%;z-index:3;color:#b77720;font-size:24px;font-weight:900}.fly-step:last-child:after{content:"↻";position:absolute;right:12px;bottom:8px;color:#b77720;font-size:23px;font-weight:900}.fly-step i{display:grid;place-items:center;width:37px;height:37px;border-radius:12px;background:#e1eef2;color:var(--blue);font-style:normal;font-weight:900}.fly-step b{display:block;color:var(--navy);font-size:19px;margin:13px 0 7px}.fly-step span{display:block;color:#667b88;font-size:13px}.fly-step em{display:block;margin-top:11px;color:#a46e24;font-style:normal;font-size:11px;font-weight:900}.north-star{margin-top:18px;text-align:center;color:#6c4b1d}.north-star b{color:#704913}
+.value-columns{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:35px}.value-column{padding:27px 25px;border-top:5px solid var(--blue);background:#fff;box-shadow:0 18px 50px rgba(10,48,69,.08)}.value-column:nth-child(2){border-color:var(--gold)}.value-column:nth-child(3){border-color:var(--green)}.value-column small{color:#9c6b28;font-weight:900;letter-spacing:.1em}.value-column h3{font:700 30px/1.3 "Songti SC",STSong,serif;color:var(--navy);margin:9px 0 14px}.value-column ul{padding-left:19px;color:#566d7a}.value-column li{margin:8px 0}.value-column footer{margin-top:16px;padding-top:12px;border-top:1px solid var(--line);color:#a16d26;font-size:12px;font-weight:900}
+.model-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:5vw;align-items:center}.model-stack{display:grid;gap:10px}.model-layer{display:grid;grid-template-columns:130px 1fr;gap:18px;align-items:center;padding:17px 21px;border-radius:13px;background:#fff;border:1px solid var(--line)}.model-layer:nth-child(1){margin:0 7%;background:#eaf4f7}.model-layer:nth-child(2){margin:0 4.5%}.model-layer:nth-child(3){margin:0 2%;background:#fff6e2;border-color:#ecd19c}.model-layer b{color:var(--navy)}.model-layer span{color:#5f7582;font-size:13px}.metric-list{display:grid;gap:9px}.metric-line{display:grid;grid-template-columns:90px 1fr;gap:15px;align-items:center;padding-bottom:11px;border-bottom:1px solid var(--line)}.metric-line b{color:var(--blue)}.metric-line span{color:#607581;font-size:13px}
+.closing{position:relative;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;max-width:1320px}.closing:after{content:"家";position:absolute;right:-1vw;top:50%;transform:translateY(-52%);font:700 clamp(300px,34vw,560px)/1 "Songti SC",STSong,serif;color:rgba(255,255,255,.025);pointer-events:none}.closing-kicker{color:#ffc568;font-size:13px;font-weight:900;letter-spacing:.18em}.closing-title{position:relative;z-index:1;max-width:1130px;margin-top:25px;font:700 clamp(48px,5.1vw,86px)/1.16 "Songti SC",STSong,serif;color:#fff}.closing-title span{color:#ffc568}.closing-summary{position:relative;z-index:1;max-width:870px;margin:28px 0 0;padding-left:21px;border-left:4px solid var(--gold);color:#c4d8e2;font-size:clamp(18px,1.55vw,25px);line-height:1.65}.closing-outcomes{position:relative;z-index:1;display:flex;gap:0;margin-top:42px;border-top:1px solid rgba(255,255,255,.16);border-bottom:1px solid rgba(255,255,255,.16)}.closing-outcomes span{padding:16px 38px;color:#fff;font-weight:900;letter-spacing:.06em}.closing-outcomes span+span{border-left:1px solid rgba(255,255,255,.16)}.closing-brand{position:relative;z-index:1;margin-top:34px;color:#ffc568;font:700 25px/1.4 "Songti SC",STSong,serif}.closing-foot{position:relative;z-index:1;margin-top:13px;color:#89a9ba;font-size:12px;letter-spacing:.08em}
+@keyframes enterUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}@keyframes enterScale{from{opacity:0;transform:translateY(18px) scale(.975)}to{opacity:1;transform:translateY(0) scale(1)}}@keyframes posterReveal{from{opacity:0;transform:translateY(22px) scale(.97) rotate(-.5deg)}to{opacity:1;transform:rotate(1deg)}}@keyframes numberPop{0%{opacity:0;transform:translateY(16px) scale(.8)}70%{transform:translateY(-2px) scale(1.06)}100%{opacity:1;transform:none}}@keyframes brandBreathe{0%,100%{box-shadow:0 0 0 0 rgba(239,182,93,0)}50%{box-shadow:0 0 0 9px rgba(239,182,93,.12)}}@keyframes hintPulse{0%,100%{box-shadow:0 0 0 0 rgba(255,204,116,0)}50%{box-shadow:0 0 0 7px rgba(255,204,116,.11)}}@keyframes progressGlow{from{transform:translateX(-120%)}to{transform:translateX(260%)}}
+.slide:before{content:"";position:absolute;inset:-15%;pointer-events:none;opacity:0;background:radial-gradient(circle 360px at var(--pointer-x,72%) var(--pointer-y,24%),rgba(239,182,93,.09),transparent 70%);transition:opacity .5s ease}.slide.light:before,.slide.white:before,.slide.gold-bg:before{background:radial-gradient(circle 340px at var(--pointer-x,72%) var(--pointer-y,24%),rgba(19,112,148,.055),transparent 70%)}.slide.active:before{opacity:1}.slide-inner{position:relative;z-index:1}.brand i{animation:brandBreathe 3.2s ease-in-out infinite}.progress i{position:relative;overflow:hidden}.progress i:after{content:"";position:absolute;inset:0;width:38%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.7),transparent);animation:progressGlow 2.8s ease-in-out infinite}.play-hint{animation:hintPulse 2.7s ease-in-out infinite}
+.slide.active .kicker,.slide.active .module-index,.slide.active .closing-kicker{animation:enterUp .55s cubic-bezier(.2,.75,.2,1) .05s backwards}.slide.active .title,.slide.active .category-name,.slide.active .module-copy h2,.slide.active .closing-title,.slide.active .quote{animation:enterUp .64s cubic-bezier(.2,.75,.2,1) .11s backwards}.slide.active .subtitle,.slide.active .lead,.slide.active .closing-summary,.slide.active .sequence{animation:enterUp .6s cubic-bezier(.2,.75,.2,1) .2s backwards}.slide.active .principle,.slide.active .brand-lines,.slide.active .module-outcome,.slide.active .ai-answer,.slide.active .sales-script,.slide.active .north-star,.slide.active .moat-close,.slide.active .closing-brand,.slide.active .closing-foot{animation:enterUp .58s cubic-bezier(.2,.75,.2,1) .28s backwards}.slide.active .poster{animation:posterReveal .72s cubic-bezier(.2,.75,.2,1) .14s backwards}.slide.active .problem-visual,.slide.active .persona-core,.slide.active .video-shell,.slide.active .model-stack,.slide.active .metric-list{animation:enterScale .7s cubic-bezier(.2,.75,.2,1) .18s backwards}.slide.active .month em{display:inline-block;animation:numberPop .72s cubic-bezier(.2,.8,.2,1) .25s backwards}
+.slide.active .problem-line,.slide.active .responsibility,.slide.active .question-row,.slide.active .moat-layer,.slide.active .fly-step,.slide.active .value-column,.slide.active .model-layer,.slide.active .metric-line,.slide.active .closing-outcomes span{animation:enterUp .52s cubic-bezier(.2,.75,.2,1) backwards}.slide.active :is(.problem-line,.responsibility,.question-row,.moat-layer,.fly-step,.value-column,.model-layer,.metric-line,.closing-outcomes span):nth-child(1){animation-delay:.18s}.slide.active :is(.problem-line,.responsibility,.question-row,.moat-layer,.fly-step,.value-column,.model-layer,.metric-line,.closing-outcomes span):nth-child(2){animation-delay:.25s}.slide.active :is(.problem-line,.responsibility,.question-row,.moat-layer,.fly-step,.value-column,.model-layer,.metric-line,.closing-outcomes span):nth-child(3){animation-delay:.32s}.slide.active :is(.problem-line,.responsibility,.moat-layer,.fly-step,.model-layer,.metric-line):nth-child(4){animation-delay:.39s}.slide.active :is(.responsibility,.fly-step,.metric-line):nth-child(5){animation-delay:.46s}
+@media(hover:hover){.video-shell,.value-column,.fly-step,.responsibility,.model-layer{transition:transform .24s ease,box-shadow .24s ease,border-color .24s ease}.video-shell:hover{transform:translateY(-5px);box-shadow:0 32px 72px rgba(4,37,57,.3)}.value-column:hover,.fly-step:hover,.model-layer:hover{transform:translateY(-4px);box-shadow:0 18px 45px rgba(8,46,66,.12)}.responsibility:hover{transform:translateX(5px)}.responsibility:hover i{background:#dcecf1}}
+.nav-arrow{position:absolute;z-index:70;right:18px;top:50%;transform:translateY(-50%);width:52px;height:52px;border:1px solid rgba(255,255,255,.18);background:rgba(4,31,48,.45);color:#fff;border-radius:16px;cursor:pointer;font-size:23px;backdrop-filter:blur(8px);transition:.2s}.nav-arrow:hover{background:rgba(239,182,93,.9);color:var(--navy)}.nav-arrow.prev{top:calc(50% - 34px)}.nav-arrow.next{top:calc(50% + 34px)}.nav-arrow:disabled{opacity:.18;cursor:default}.nav-arrow:disabled:hover{background:rgba(4,31,48,.45);color:#fff}.slide-label{position:absolute;z-index:55;bottom:17px;left:50%;transform:translateX(-50%);color:#b5cbd7;font-size:12px;letter-spacing:.08em}.light~.slide-label,.white~.slide-label{color:#6d818c}.swipe-tip{position:absolute;z-index:55;bottom:17px;right:32px;color:#7893a3;font-size:11px}
+@media(max-width:900px){.slide{padding:72px 7vw 58px}.two-col,.two-col.equal,.two-col.poster-layout,.persona,.category,.module-layout,.model-layout,.closing{grid-template-columns:1fr}.poster{display:none}.problem-visual{display:none}.persona-core{width:280px}.responsibilities{grid-template-columns:1fr 1fr}.module-copy{display:none}.video-shell{max-width:820px;margin:auto}.flywheel{grid-template-columns:1fr 1fr}.fly-step{min-height:145px}.fly-step:not(:last-child):after{display:none}.value-columns{grid-template-columns:1fr 1fr}.value-column:last-child{grid-column:1/-1}.nav-arrow{width:42px;height:42px}.brand-lines{display:none}}
+@media(max-width:580px){.chrome{padding:0 16px}.brand span{display:none}.slide{padding:72px 48px 54px}.title{font-size:35px}.quote{font-size:31px}.responsibilities{grid-template-columns:1fr}.flywheel,.value-columns{grid-template-columns:1fr}.value-column:last-child{grid-column:auto}.fly-step{display:none}.fly-step:nth-child(1),.fly-step:nth-child(3),.fly-step:nth-child(5){display:block}.month-parts{flex-wrap:wrap}.model-layer{grid-template-columns:1fr}.page-meta button{display:none}.swipe-tip{display:none}.nav-arrow{right:5px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}.slide:before{display:none}}
+@media print{html,body{overflow:visible;background:#fff}.deck{height:auto}.chrome,.nav-arrow,.progress,.slide-label,.swipe-tip{display:none}.stage{position:static}.slide{position:relative;width:100%;height:100vh;opacity:1;visibility:visible;transform:none!important;break-after:page}.slide.past{transform:none}.video-shell video{display:none}}
+</style>
+</head>
+<body>
+<main class="deck" id="deck">
+<div class="progress"><i id="progressBar"></i></div>
+<header class="chrome"><div class="brand"><i>家</i><span>家安 · 家庭生活稳定账户</span></div><div class="page-meta"><button id="fullscreenBtn" type="button">全屏演示</button><span id="counter">01 / 14</span></div></header>
+<div class="stage">
+
+<section class="slide dark active" data-title="封面">
+<div class="slide-inner two-col poster-layout"><div><div class="kicker">26 黑马大赛 · AI 产品孵化赛道</div><h1 class="title">家安<br><em>家庭生活稳定账户</em></h1><p class="subtitle">不是多卖保险，而是把保单、可领取权益、家庭责任与现金安排放在一起，让每个认真生活的家都能稳稳向前。</p><div class="principle">让风险有安排，让生活照常向前。</div><div class="brand-lines"><span><b>产品原则</b><br>先管好已有的，再决定要不要买新的</span><span><b>核心角色</b><br>安管家 · 家庭生活稳定顾问</span></div></div><figure class="poster"><img src="assets/jiaan-poster.png" alt="家安产品宣传海报"></figure></div>
+</section>
+
+<section class="slide light" data-title="用户痛点">
+<div class="slide-inner two-col"><div><div class="kicker">01 / THE PROBLEM</div><h2 class="title">不是没买保险，<br>而是关键时刻<br><em>不知道怎么用</em></h2><div class="problem-lines"><div class="problem-line"><i>散</i><div><b>找不全：不知道全家到底买过什么</b><p>保单分散在公司、家庭成员与不同载体，附加险、历史保单和可领权益容易遗漏。</p></div></div><div class="problem-line"><i>懂</i><div><b>看不懂：看见保单，也不知道有什么用</b><p>哪些能赔、何时可领、退保损失什么，复杂条款很难变成清晰判断。</p></div></div><div class="problem-line"><i>问</i><div><b>问不准：每次问 AI 都要从头解释</b><p>逐张截图、反复上传，缺少家庭与保单上下文，答案难以可信、可执行。</p></div></div><div class="problem-line"><i>管</i><div><b>没人管：保险服务停在销售阶段</b><p>领取、续保、保障优化与理赔协助无人持续跟进，保单买完再次沉睡。</p></div></div></div></div><div class="problem-visual"><div class="phone-stack one"></div><div class="phone-stack two"></div><div class="pain-badge">没有完整、可信的保单数据，再聪明的 AI 也只能猜。</div></div></div>
+</section>
+
+<section class="slide white" data-title="目标用户">
+<div class="slide-inner persona"><div class="persona-core"><b>30—45</b><span>家庭责任中坚人群</span></div><div><div class="kicker">02 / WHO WE SERVE</div><h2 class="title">他们不缺责任感，<br>缺的是一个<em>站在家庭一边</em>的人</h2><div class="responsibilities"><div class="responsibility"><i>房</i><b>房贷与长期支出</b><span>不能断</span></div><div class="responsibility"><i>学</i><b>孩子生活与教育</b><span>要持续</span></div><div class="responsibility"><i>亲</i><b>双方父母照护</b><span>要有余量</span></div><div class="responsibility"><i>保</i><b>多渠道多张保单</b><span>要管清</span></div></div><p class="subtitle">收入不低、时间稀缺，不排斥保险，但反感焦虑营销和持续推销。</p></div></div>
+</section>
+
+<section class="slide gold-bg" data-title="产品定位">
+<div class="slide-inner category"><div><div class="kicker">03 / A NEW CATEGORY</div><div class="category-name">家安<span>家庭生活稳定账户</span></div><p class="subtitle">管理对象不是保单，而是家庭生活是否会被风险打断。</p><div class="sequence"><span>先领回</span>→<span>再省下</span>→<span>先优化已有</span>→<span>最后判断是否补充</span></div></div><div class="three-questions"><div class="question-row"><small>今天</small><b>最值得先办什么？</b></div><div class="question-row"><small>风险发生</small><b>这个家还能照常多久？</b></div><div class="question-row"><small>需要决策</small><b>已有够不够，是否真的需要买？</b></div></div></div>
+</section>
+
+<section class="slide light" data-title="模块一 · 认识这个家">
+<div class="slide-inner module-layout"><div class="module-copy"><div class="module-index">ACT 01 · 数据接回</div><h2>认识这个家：<br>授权一次，少填十次</h2><p class="lead">授权京东保险数据后，自动识别成员、投被保关系、保单、权益与近期服务，只确认系统不知道的信息。</p><ul><li>识别 3 位核心家庭成员</li><li>接回 8 份京东保险保单</li><li>发现 2 项近期服务</li></ul><div class="module-outcome">首个爽点：不用截图，一次形成家庭上下文</div></div><figure class="video-shell"><span class="play-hint">点击视频播放</span><video controls preload="metadata" src="pitch-videos/01_京东保险授权与家庭识别.mp4"></video><figcaption class="video-label"><b>京东保险授权与家庭识别</b><span>一键授权 + 一次确认</span></figcaption></figure></div>
+</section>
+
+<section class="slide white" data-title="模块二 · 日常首页">
+<div class="slide-inner module-layout"><div class="module-copy"><div class="module-index">ACT 02 · 日常首页</div><h2><span class="title-line">首页不是分数，</span><span class="title-line">而是给你一份</span><em class="title-line">家庭行动清单</em></h2><p class="lead">把可领取、可节省、要续保和需要确认的事项，按价值与时效排好；用户打开就知道先办哪一件。</p><div class="today-list"><div class="today-item"><i>领</i><div><b>近期可领取</b><span>核对领取条件，避免权益沉睡</span></div><strong>优先处理</strong></div><div class="today-item"><i>省</i><div><b>可能重复的责任</b><span>先专业复核，不贸然退保</span></div><strong>可节省</strong></div><div class="today-item"><i>守</i><div><b>续保与信息变更</b><span>把断缴、等待期和受益人红线前置</span></div><strong>持续提醒</strong></div></div><div class="module-outcome">用户每天看到的是“下一步”，不是需要自己解释的指标</div></div><figure class="video-shell"><span class="play-hint">日常高频入口</span><video controls preload="metadata" src="pitch-videos/02_日常首页与18个月解释.mp4"></video><figcaption class="video-label"><b>日常首页与行动排序</b><span>先办事 · 再解释 · 持续提醒</span></figcaption></figure></div>
+</section>
+
+<section class="slide light" data-title="模块三 · 保单资产">
+<div class="slide-inner module-layout"><div class="module-copy"><div class="module-index">ACT 03 · 保单资产</div><h2>先找回、再省下，<br>最后才讨论新增</h2><p class="lead">保单不按险种堆列表，而是按用户价值排成任务。</p><ul><li>近期可领取什么</li><li>哪些责任可能重复</li><li>哪些要续保、变更或人工复核</li></ul><div class="module-outcome">先证明“我能帮你管好已有的”，再谈新的保障</div></div><figure class="video-shell"><span class="play-hint">存量价值</span><video controls preload="metadata" src="pitch-videos/03_保单权益与可省可领.mp4"></video><figcaption class="video-label"><b>保单权益与可省可领</b><span>少错过 · 少花错 · 少做错</span></figcaption></figure></div>
+</section>
+
+<section class="slide white" data-title="模块四 · 安管家">
+<div class="slide-inner module-layout"><div class="module-copy"><div class="module-index">ACT 04 · 稳定顾问</div><h2>真实问、专业答，<br>而且更懂这个家</h2><p class="lead">安管家基于家庭责任、保单条款和用户当前问题组织答案，每次都按“结论—依据—红线—下一步”清楚表达。</p><div class="ai-answer"><b>现在不买，不亏。</b><p>先把已有医疗险的续保条件核清楚。</p></div><p><span class="redline">别在新保单正式生效前断缴旧保单，顺序很重要。</span></p><div class="sales-script">“请分别写清保证续保期、等待期和替换后的责任衔接。”</div></div><figure class="video-shell"><span class="play-hint">专业问答</span><video controls preload="metadata" src="pitch-videos/04_安管家专业问答与产品比较.mp4"></video><figcaption class="video-label"><b>安管家问答与产品比较</b><span>判断 · 依据 · 红线 · 一个下一步</span></figcaption></figure></div>
+</section>
+
+<section class="slide light" data-title="模块五 · 服务闭环">
+<div class="slide-inner module-layout"><div class="module-copy"><div class="module-index">ACT 05 · 服务闭环</div><h2>不只告诉用户“可能能赔”，<br>而是陪他办完</h2><p class="lead">事故发生后，匹配可用保单与权益，生成报案顺序、材料清单、时效提醒和人工服务入口。</p><ul><li>责任与权益匹配</li><li>报案及材料行动清单</li><li>理赔时效红线提醒</li></ul><div class="module-outcome">AI 不是流程终点，而是保险服务的智能入口</div></div><figure class="video-shell"><span class="play-hint">履约价值</span><video controls preload="metadata" src="pitch-videos/05_理赔权益与行动清单.mp4"></video><figcaption class="video-label"><b>理赔权益与行动清单</b><span>从“看懂”走向“办完”</span></figcaption></figure></div>
+</section>
+
+<section class="slide dark" data-title="核心壁垒">
+<div class="slide-inner"><div class="kicker">04 / DEFENSIBILITY</div><h2 class="title">壁垒不是一个大模型，<br>而是<em>四层能力一起闭环</em></h2><div class="moat-stack"><div class="moat-layer"><b>家庭级授权数据</b><span>保单、成员、责任、权益与服务事件形成持续上下文</span><em>别人看一张，我们看一个家</em></div><div class="moat-layer"><b>可审计专业模型</b><span>责任、条款、稳定力与情景假设都能解释和复核</span><em>每个结论有依据</em></div><div class="moat-layer"><b>长期任务记忆</b><span>围绕领取、续保、缴费、变更与家庭变化持续服务</span><em>不是一次报告</em></div><div class="moat-layer"><b>保险履约闭环</b><span>从判断连接到领取、保全、理赔和人工专家</span><em>最终把事情办完</em></div></div><div class="moat-close">模型可以被替换，家庭数据关系、专业证据和服务闭环会持续积累。</div></div>
+</section>
+
+<section class="slide gold-bg" data-title="增长飞轮">
+<div class="slide-inner"><div class="kicker">05 / GROWTH</div><h2 class="title">一个用户带来一个家庭，<br>一次服务带来<em>下一次打开</em></h2><div class="flywheel"><div class="fly-step"><i>1</i><b>找到入口</b><span>保单、订单、客服、理赔与内容场景</span><em>入口点击率</em></div><div class="fly-step"><i>2</i><b>一键授权</b><span>接回京东保险保单与近期权益</span><em>授权转化率</em></div><div class="fly-step"><i>3</i><b>立即见价值</b><span>首屏发现一笔可领、可省或待办</span><em>首次价值时间</em></div><div class="fly-step"><i>4</i><b>邀请家人</b><span>伴侣确认责任、补充保单、共同处理</span><em>家庭邀请率</em></div><div class="fly-step"><i>5</i><b>事件召回</b><span>领取、续保、缴费、理赔与家庭变化</span><em>月度行动率</em></div></div><div class="north-star">北极星指标：<b>每月完成的家庭稳定行动数</b>，而不是单纯打开次数。</div></div>
+</section>
+
+<section class="slide light" data-title="业务价值">
+<div class="slide-inner"><div class="kicker">06 / BUSINESS VALUE</div><h2 class="title">用户愿意留下，<br>平台才能获得<em>长期业务价值</em></h2><div class="value-columns"><div class="value-column"><small>TO USER</small><h3>家庭价值</h3><ul><li>少错过：权益、续保和理赔时效</li><li>少花错：重复责任与不必要支出</li><li>少做错：退保、断缴、替换红线</li><li>更安心：知道下一件最重要的事</li></ul><footer>看：找回权益、节省金额、任务完成、NPS</footer></div><div class="value-column"><small>TO JD INSURANCE</small><h3>业务价值</h3><ul><li>低频交易入口升级为长期家庭账户</li><li>激活存量保单与服务触达</li><li>降低重复咨询与人工解释成本</li><li>信任基础上识别真实新增需求</li></ul><footer>看：30日留存、服务渗透、保单留存、有效转化</footer></div><div class="value-column"><small>TO ECOSYSTEM</small><h3>生态价值</h3><ul><li>帮助保险公司提升客户经营与履约</li><li>为企业员工福利增加家庭服务</li><li>为银行财富客户补充保险责任视角</li><li>复用条款、责任和行动能力</li></ul><footer>看：机构覆盖、家庭账户、服务调用</footer></div></div></div>
+</section>
+
+<section class="slide white" data-title="商业模式">
+<div class="slide-inner model-layout"><div><div class="kicker">07 / BUSINESS MODEL</div><h2 class="title">基础能力免费，<br>专业服务付费，<br><em>真实需求转化</em></h2><div class="model-stack"><div class="model-layer"><b>免费基础账户</b><span>保单接回、权益提醒、基础问答、家庭待办</span></div><div class="model-layer"><b>家庭会员</b><span>深度稳定分析、年度复盘、持续监测、专家复核</span></div><div class="model-layer"><b>保险服务转化</b><span>完成存量体检后，针对真实缺口提供适配服务</span></div><div class="model-layer"><b>B2B2C / 能力开放</b><span>向机构输出家庭稳定体检与专业引擎</span></div></div></div><div><h3 class="title" style="font-size:34px">每一层指标，证明下一层是否成立</h3><div class="metric-list"><div class="metric-line"><b>拉新</b><span>入口点击、授权转化、获客成本</span></div><div class="metric-line"><b>激活</b><span>首次价值时间、首个权益发现率</span></div><div class="metric-line"><b>留存</b><span>家庭邀请、事件响应、月度行动数</span></div><div class="metric-line"><b>信任</b><span>NPS、依据查看、复核与事实错误率</span></div><div class="metric-line"><b>业务</b><span>权益领取、服务渗透、保单留存、有效转化</span></div></div></div></div>
+</section>
+
+<section class="slide dark" data-title="结语">
+<div class="slide-inner closing"><div class="closing-kicker">JIAAN · FAMILY LIFE STABILITY</div><div class="closing-title">保险的终点，不是多一张保单。<br>是生活突然改变时，<br>这个家<span>依然有选择。</span></div><p class="closing-summary">家安把分散的保单、权益与服务，变成一家人的生活稳定计划。</p><div class="closing-outcomes"><span>生活不断档</span><span>责任有安排</span><span>未来有余地</span></div><div class="closing-brand">家安，让风险有安排，让生活照常向前。</div><div class="closing-foot">家庭生活稳定账户｜极限梦之队</div></div>
+</section>
+
+</div>
+<button class="nav-arrow prev" id="prevBtn" type="button" aria-label="上一页">↑</button>
+<button class="nav-arrow next" id="nextBtn" type="button" aria-label="下一页">↓</button>
+<div class="slide-label" id="slideLabel">封面</div>
+<div class="swipe-tip">滚轮 ↓ / 页面上滑 下一页 · ↑ 上一页 · F 全屏</div>
+</main>
+<script>
+(function(){
+  var slides=Array.from(document.querySelectorAll(".slide"));
+  var index=0;
+  var prev=document.getElementById("prevBtn");
+  var next=document.getElementById("nextBtn");
+  var counter=document.getElementById("counter");
+  var label=document.getElementById("slideLabel");
+  var bar=document.getElementById("progressBar");
+  var fs=document.getElementById("fullscreenBtn");
+  function pauseVideos(){document.querySelectorAll("video").forEach(function(v){v.pause();});}
+  function playActiveVideo(){
+    var slide=slides[index],video=slide.querySelector("video");
+    if(!video)return;
+    video.setAttribute("playsinline","");
+    try{video.currentTime=0;}catch(ignore){}
+    var playback;
+    try{playback=video.play();}catch(ignore){return;}
+    if(playback&&typeof playback.catch==="function")playback.catch(function(){
+      if(!slide.classList.contains("active"))return;
+      video.muted=true;
+      var fallback=video.play();
+      if(fallback&&typeof fallback.catch==="function")fallback.catch(function(){});
+    });
+  }
+  function show(n,updateHash){
+    index=Math.max(0,Math.min(slides.length-1,n));
+    slides.forEach(function(s,i){s.classList.toggle("active",i===index);s.classList.toggle("past",i<index);});
+    pauseVideos();
+    playActiveVideo();
+    prev.disabled=index===0;
+    next.disabled=index===slides.length-1;
+    counter.textContent=String(index+1).padStart(2,"0")+" / "+String(slides.length).padStart(2,"0");
+    label.textContent=slides[index].getAttribute("data-title")||"";
+    bar.style.width=((index+1)/slides.length*100)+"%";
+    if(updateHash!==false)history.replaceState(null,"","#"+(index+1));
+  }
+  prev.addEventListener("click",function(){show(index-1);});
+  next.addEventListener("click",function(){show(index+1);});
+  fs.addEventListener("click",function(){if(!document.fullscreenElement){document.documentElement.requestFullscreen().catch(function(){});}else{document.exitFullscreen();}});
+  document.getElementById("deck").addEventListener("pointermove",function(e){
+    if(window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+    var active=slides[index],rect=active.getBoundingClientRect();
+    active.style.setProperty("--pointer-x",((e.clientX-rect.left)/rect.width*100).toFixed(1)+"%");
+    active.style.setProperty("--pointer-y",((e.clientY-rect.top)/rect.height*100).toFixed(1)+"%");
+  });
+  window.addEventListener("keydown",function(e){
+    if(e.target&&["INPUT","TEXTAREA"].includes(e.target.tagName))return;
+    if(["ArrowDown","PageDown"," ","Enter"].includes(e.key)){e.preventDefault();show(index+1);}
+    if(["ArrowUp","PageUp","Backspace"].includes(e.key)){e.preventDefault();show(index-1);}
+    if(e.key==="Home"){e.preventDefault();show(0);}
+    if(e.key==="End"){e.preventDefault();show(slides.length-1);}
+    if(e.key.toLowerCase()==="f"){fs.click();}
+  });
+  var wheelLocked=false,wheelDistance=0,wheelReset;
+  window.addEventListener("wheel",function(e){
+    if(Math.abs(e.deltaY)<=Math.abs(e.deltaX))return;
+    e.preventDefault();
+    if(wheelLocked)return;
+    wheelDistance+=e.deltaY;
+    clearTimeout(wheelReset);
+    wheelReset=setTimeout(function(){wheelDistance=0;},180);
+    if(Math.abs(wheelDistance)<46)return;
+    show(index+(wheelDistance>0?1:-1));
+    wheelDistance=0;
+    wheelLocked=true;
+    setTimeout(function(){wheelLocked=false;},650);
+  },{passive:false});
+  var startX=0,startY=0;
+  window.addEventListener("touchstart",function(e){startX=e.changedTouches[0].screenX;startY=e.changedTouches[0].screenY;},{passive:true});
+  window.addEventListener("touchend",function(e){var dx=e.changedTouches[0].screenX-startX;var dy=e.changedTouches[0].screenY-startY;if(Math.abs(dy)>60&&Math.abs(dy)>Math.abs(dx)){show(index+(dy<0?1:-1));}},{passive:true});
+  var fromHash=parseInt(location.hash.slice(1),10);
+  show(Number.isFinite(fromHash)?fromHash-1:0,false);
+})();
+</script>
+</body>
+</html>
